@@ -2,7 +2,7 @@ const fs = require("fs");
 const findRemoveSync = require('find-remove');
 const sqlite3 = require('sqlite3').verbose();
 let moment = require('moment');
-const dir = '/home/plexbackup'; //PATH where to store .txt files
+const dir = './txt'; //PATH where to store .txt files
 const plexDb = './com.plexapp.plugins.library.db'; //PATH to Plex database file
 let file_name = moment().format('D-MM-Y H_mm_ss')+".txt";
 

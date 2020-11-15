@@ -3,3 +3,4 @@
 /com.plexapp.plugins.library.db-shm
 /com.plexapp.plugins.library.db-wal
 /.idea
+/txt/*
