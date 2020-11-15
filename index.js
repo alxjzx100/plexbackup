@@ -17,6 +17,7 @@ let db = new sqlite3.Database(plexDb, (err) => {
 });
 
 db.serialize(() => {
+    //metadata_items.metadata_type=1  - means "Movies". May vary? Specified at library_sections table
     db.each(`SELECT 
   	metadata_items.title as Title,
   	metadata_items.year as Year,
