@@ -2,11 +2,11 @@ const fs = require("fs");
 const findRemoveSync = require('find-remove');
 const sqlite3 = require('sqlite3').verbose();
 let moment = require('moment');
-const dir = '/home/plexbackup'; //Путь к папке с текстовыми файлами
-const plexDb = './com.plexapp.plugins.library.db';
+const dir = '/home/plexbackup'; //PATH where to store .txt files
+const plexDb = './com.plexapp.plugins.library.db'; //PATH to Plex database file
 let file_name = moment().format('D-MM-Y H_mm_ss')+".txt";
 
-let result = findRemoveSync(dir, {age: {seconds: 86400*7}, extensions: '.txt', limit: 100});
+let result = findRemoveSync(dir, {age: {seconds: 86400*7}, extensions: '.txt', limit: 100}); //86400*7 - older than 7 days
 console.log('Deleted '+Object.keys(result).length+' file(s)');
 
 let db = new sqlite3.Database(plexDb, (err) => {

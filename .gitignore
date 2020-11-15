@@ -1,1 +1,5 @@
 /node_modules/
+/com.plexapp.plugins.library.db
+/com.plexapp.plugins.library.db-shm
+/com.plexapp.plugins.library.db-wal
+/.idea
